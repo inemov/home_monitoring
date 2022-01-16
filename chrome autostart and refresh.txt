@@ -1,5 +1,0 @@
-sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
-add last line:
-@/home/pi/home-monitoring/sensor2db_activation.sh 
-@/home/pi/home-monitoring/chromium_start.sh 
-@/home/pi/home-monitoring/chromium_refresh.sh
