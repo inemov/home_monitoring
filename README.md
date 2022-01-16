@@ -89,14 +89,14 @@ Add at the end to automatically start three scripts after reboot:
 - Copy Grafana dashboard Home monitoring-1642299995636.json from the repository and import it in Grafana interface (http://localhost:3000)
 
 ## Logon information summary
-[RPI]
+### RPI
 login: pi@rpi-homemonitoring
 password: home_monitoring
 
-[python venv]
+### python venv
 name: sensor_dev
 
-[PostgreSQL]
+### PostgreSQL
 user: pi
 password: home_monitoring
 database: pi
@@ -104,6 +104,6 @@ table: home_monitoring
 host: localhost
 port: 5432
 
-[Grafana] 
+### Grafana
 user: pi
 password: home_monitoring
