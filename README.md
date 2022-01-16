@@ -1,5 +1,8 @@
 # Home environmental monitoring
-Sensor metrics collection with BME280, storage in PostgreSQL and Grafana dashboard on Raspberry Pi.
+Sensor metrics collection with BME280, storage in PostgreSQL and Grafana dashboard automatically loaded in kiosk mode on Raspberry Pi.
+
+![image](https://user-images.githubusercontent.com/24581566/149658366-e026ddf8-607e-46f6-9d5c-6dc6809561b0.png)
+
  
 ## Hardware
 - Raspberry Pi 4 Model B 4GB RAM https://www.raspberrypi.com/products/raspberry-pi-4-model-b/
@@ -76,7 +79,7 @@ Copy files from repository \home\pi\home-monitoring to corresponding location on
 ```
 sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
 ```
-Add at the end:
+Add at the end to automatically start three scripts after reboot:
 ```
 @/home/pi/home-monitoring/sensor2db_activation.sh 
 @/home/pi/home-monitoring/chromium_start.sh 
