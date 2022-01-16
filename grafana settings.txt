@@ -1,0 +1,10 @@
+cd etc\grafana
+sudo nano grafana.ini
+disable_sanitize_html = true
+allow_embedding = true
+enable_alpha = false
+
+cd etc\grafana
+sudo nano grafana.ini
+
+sudo systemctl restart grafana-server

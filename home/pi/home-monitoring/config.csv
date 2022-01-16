@@ -1,0 +1,9 @@
+user,pi
+password,home_monitoring
+database,pi
+host,localhost
+port,5432
+tablename,home_monitoring
+period_sec,10
+cutoff_day,365
+timezone,Australia/Perth
