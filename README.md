@@ -33,4 +33,52 @@ Table 'home_monitoring' will be created automatically by python script.
 ```
 sudo apt install grafana
 ```
+Peform following changes in Grafana settings:
+```
+cd etc\grafana
+sudo nano grafana.ini
+```
+Change following parameters:
+```
+disable_sanitize_html = true
+allow_embedding = true
+enable_alpha = false
+```
+Exit from editor Ctrl-X and save changes.
+Restart Grafana service:
+```
+sudo systemctl restart grafana-server
+```
+If necessary, replace files on Raspberry Pi to match files in the repository etc and usr folders.
 
+- Install python and create virtual environment:
+
+```
+sudo apt install python3
+sudo apt-get install python3-venv
+python3 -m venv sensor_dev
+```
+
+Activate the virtual environment:
+```
+workon sensor_dev
+```
+
+Install necessary libraries:
+```
+pip3 install psycopg2
+pip3 install smbus2
+pip install bme280
+```
+
+- Put scripts in target folder and configure autostart:
+Copy files from repository \home\pi\home-monitoring to corresponding location on Raspberry Pi.
+```
+sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
+```
+Add at the end:
+```
+@/home/pi/home-monitoring/sensor2db_activation.sh 
+@/home/pi/home-monitoring/chromium_start.sh 
+@/home/pi/home-monitoring/chromium_refresh.sh
+```
