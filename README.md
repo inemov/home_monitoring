@@ -14,16 +14,23 @@ Sensor metrics collection with BME280, storage in PostgreSQL and Grafana dashboa
 ## Software
 
 - Setup of right-click functionality for Waveshare 7" touch screen https://www.inemov.com/post/set-rightclick-rpi-waveshare7-touchscreen
+
 - Install PostgreSQL and create pi user and pi database:
-'''
+```
 sudo apt install postgresql
 sudo su postgres
 createuser pi -P --interactive
-'''
-provide password and allow the role to be a superuser
-'''
-psql
-CREATE DATABASE pi;
-exit
-'''
-- 
+```
+Provide password 'home_monitoring' and allow the pi role to be a superuser.
+Exit from the postgres user:
+```
+Ctrl-q
+```
+
+Table 'home_monitoring' will be created automatically by python script.
+
+- Install Grafana
+```
+sudo apt install grafana
+```
+
