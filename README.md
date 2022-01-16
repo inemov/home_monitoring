@@ -82,3 +82,25 @@ Add at the end:
 @/home/pi/home-monitoring/chromium_start.sh 
 @/home/pi/home-monitoring/chromium_refresh.sh
 ```
+
+- Copy Grafana dashboard Home monitoring-1642299995636.json from the repository and import it in Grafana interface (http://localhost:3000)
+
+## Logon information summary
+[RPI]
+login: pi@rpi-homemonitoring
+password: home_monitoring
+
+[python venv]
+name: sensor_dev
+
+[PostgreSQL]
+user: pi
+password: home_monitoring
+database: pi
+table: home_monitoring
+host: localhost
+port: 5432
+
+[Grafana] 
+user: pi
+password: home_monitoring
